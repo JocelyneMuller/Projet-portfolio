@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jocelyne Muller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Oooh+Baby&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Styles de base */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff9ef;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Espacement entre les sections */
+        section {
+            scroll-snap-align: start;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Header du portfolio */
+        .portfolio-header {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Titre h1 */
+        .portfolio-header h1 {
+            font-family: 'Limelight', sans-serif;
+            font-size: 8rem;
+            color: #ffbba6;
+            margin: 100px 0 0 0;
+        }
+
+        /* Titre h2 */
+        .portfolio-header h2 {
+            font-family: 'Oooh Baby', cursive;
+            font-size: 3rem;
+            color: #ed2a2a;
+            margin: 20px 0;
+        }
+
+        /* Barre verticale et horizontale déplacée vers la gauche et colorée */
+        .portfolio-header .line {
+            position: absolute;
+            top: 0;
+            left: 10%; /* Déplacée vers la gauche */
+            height: 100%;
+            width: 5px;
+            background-color: #ffbba6;
+        }
+
+        .portfolio-header .horizontal-line {
+            position: absolute;
+            top: 40px;
+            left: 5%; /* Déplacée vers la gauche */
+            width: 300px;
+            height: 5px;
+            background-color: #ed2a2a;
+        }
+
+        /* Tag du nom */
+        .portfolio-header .name-tag {
+            display: inline-block; /* Assure que le badge soit un bloc inline */
+            margin-top: 30px; /* Ajoute un espace entre le h2 et le badge */
+            background-color: #ffbba6;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+        }
+
+        /* Section "About Me" */
+        .about-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            margin: 100px;
+            padding: 40px 20px;
+        }
+
+        .about-text {
+            width: 45%;
+            margin-bottom: 150px;
+        }
+
+        .about-text h2 {
+            font-family: 'Limelight', sans-serif;
+            font-size: 3rem;
+            color: #ffbba6;
+            margin-bottom: 10px;
+        }
+
+        .about-text h2 span {
+            font-family: 'Oooh Baby', cursive;
+            color: #ed2a2a;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .spaced-lines {
+            line-height: 2; /* ajustez la valeur selon l'espacement souhaité */
+        }
+        
+        .about-image {
+            width: 20%; /* Réduction de la taille de l'image */
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 30%;
+        }
+
+        /* Section Langages de programmation */
+        .languages-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .languages-title {
+            font-family: 'Limelight', sans-serif;
+            font-size: 4rem;
+            color: #ffbba6;
+            margin-bottom: 150px;
+        }
+
+        .languages-title span {
+            font-family: 'Oooh Baby', cursive;
+            color: #ed2a2a;
+        }
+
+        .languages-content {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .language-box {
+            width: 150px;
+            height: 150px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Section Mes Projets */
+        .projects-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .projects-title {
+            font-family: 'Limelight', sans-serif;
+            font-size: 4rem;
+            color: #ffbba6;
+            margin-bottom: 150px;
+        }
+
+        .projects-title span {
+            font-family: 'Oooh Baby', cursive;
+            color: #ed2a2a;
+        }
+
+        .projects-content {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .project-box {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .project-box img {
+            max-width: 100%;
+            height: 100%;
+        }
+
+        /* Infobulle pour les projets */
+        .project-box::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-box:hover::after {
+            opacity: 1;
+        }
+
+        /* Section Recommandations */
+        .recommendations-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .recommendations-title {
+            font-family: 'Limelight', sans-serif;
+            font-size: 4rem;
+            color: #ffbba6;
+            margin-bottom: 150px;
+        }
+
+        .recommendations-title span {
+            font-family: 'Oooh Baby', cursive;
+            color: #ed2a2a;
+        }
+
+        .recommendation-box {
+            background-color: #ffbba6;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 70px;
+            border-radius: 10px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .recommender-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .recommender-info span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            background-color: #ed2a2a;
+            border-radius: 50%;
+        }
+
+        .recommendation-details {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        /* Section Contact */
+        .contact-section {
+            text-align: center;
+            padding: 20px;
+            margin: 100px auto;
+        }
+        
+        .contact-title {
+            font-family: 'Limelight', sans-serif;
+            font-size: 3rem;
+            color: #ffbba6;
+        }
+        
+        .contact-title span {
+            font-family: 'Oooh Baby', cursive;
+            color: #ed2a2a;
+            font-size: 2.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-right: 200px;
+        }
+        
+        .contact-left, .contact-right {
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            margin-right: 90px;
+        }
+        
+        .contact-left p, .contact-right p {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .contact-left img, .contact-right img {
+            width: 25px; /* Ajuste la taille de tes icônes */
+            height: 25px;
+            margin-right: 10px;
+        }
+        
+        .contact-right a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-right a:hover {
+            text-decoration: underline;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- Section Header -->
+    <div class="portfolio-header">
+        <div class="line"></div>
+        <div class="horizontal-line"></div>
+        <h1>PORTFOLIO</h1>
+        <h2>AI & Cybersecurity Developer</h2>
+        <div class="name-tag">Jocelyne Muller</div>
+    </div>
+
+    <!-- Section About Me -->
+    <div class="about-section">
+        <div class="about-text">
+            <h2>ABOUT <span>me</span></h2>
+            <p>A specialist in digital marketing and sales, I recently joined IBM's AI & Cybersecurity Academy to train in web development.<br>
+                My professional goal is to become a Growth Ops and Digital Project Manager.<br>My favorite quote :
+                <q> No matter how good you get you can always get better, and that's the exciting part.</q>
+                <cite>Tiger Woods</cite>
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="images/photodeprofil.jpg" alt="Profile Picture">
+        </div>
+    </div>
+
+    <!-- Section Langages de programmation -->
+    <div class="languages-section">
+        <h2 class="languages-title">My <span>Coding languages</span></h2>
+        <div class="languages-content">
+            <div class="language-box"><img src="images/python_logo.png" alt="Langage 1 python"></div>
+            <div class="language-box"><img src="images/CSS.svg" alt="Langage css"></div>
+            <div class="language-box"><img src="images/php.png" alt="Langage php"></div>
+            <div class="language-box"><img src="images/html.png" alt="Langage html"></div>
+        </div>
+    </div>
+
+    <!-- Section Mes Projets -->
+    <div class="projects-section">
+        <h2 class="projects-title">My <span>Projects</span></h2>
+        <div class="projects-content">
+            <div class="project-box" title="Description du Projet 1">
+                <img src="images/Demineur.png" alt="jeu du demineur">
+            </div>
+            <div class="project-box" title="Description du Projet 2">
+                <img src="images/hangman.png" alt="jeu du pendu">
+            </div>
+            <div class="project-box" title="Description du Projet 3">
+                <img src="images/Joyceparis.png" alt="Joyce paris">
+            </div>
+            <div class="project-box" title="Description du Projet 4">
+                <img src="images/jeudelavie.gif" alt="Jeu de la vie">
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Recommandations -->
+    <div class="recommendations-section">
+        <h2 class="recommendations-title">My <span>Recommandations</span></h2>
+        <div class="recommendation-box">
+            <div class="recommender-info">
+                <span>Client 1</span>
+                <div class="profile-pic"></div>
+            </div>
+            <div class="recommendation-details">
+                <p>John Doe, Technical director, TechCorp</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu ligula ac quam feugiat ultricies."</p>
+            </div>
+        </div>
+        <div class="recommendation-box">
+            <div class="recommender-info">
+                <span>Client 2</span>
+                <div class="profile-pic"></div>
+            </div>
+            <div class="recommendation-details">
+                <p>Jane Smith, CEO, Innovatech</p>
+                <p>"Aliquam euismod ligula ut orci vestibulum. Nulla facilisi."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Contact -->
+    <!-- Tes autres sections ici (About Me, Projects, Recommandations, etc.) -->
+
+<!-- Section Let's Keep in Touch -->
+<div class="contact-section">
+    <h2 class="contact-title">Let's Keep <span>in touch</span></h2>
+    
+    <div class="contact-info">
+        <div class="contact-left">
+            <p><img src="images/Téléphone.png" alt="Phone Icon"> 06 48 72 42 81</p>
+            <p><img src="images/email.png" alt="Email Icon"> jocelyned.muller@gmail.com</p>
+            <p><img src="images/Ville.png" alt="Location Icon"> 2a rue de Bruxelles, 67600 Sélestat</p>
+        </div>
+        <div class="contact-right">
+            <p><img src="images/Linkedin.png" alt="LinkedIn Icon"> <a href="#">Linkedin</a></p>
+            <p><img src="images/Github.png" alt="GitHub Icon"> <a href="#">Github</a></p>
+            <p><img src="images/CV.png" alt="CV Icon"> <a href="#">CV (lien)</a></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
