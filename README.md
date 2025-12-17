@@ -12,16 +12,74 @@ Portfolio professionnel de Jocelyne Muller, développeuse spécialisée en IA et
 - **Portfolio de projets** incluant le Démineur, le Pendu, Joyce Paris et le Jeu de la Vie
 - **Recommandations clients**
 - **Section contact** avec coordonnées et liens vers LinkedIn, GitHub et CV
+- **Navigation fluide** entre les sections
+- **Design responsive** optimisé pour mobile, tablette et desktop
+- **Accessibilité** améliorée pour tous les utilisateurs
 
 ## 🎨 Technologies utilisées
 
-- HTML5
-- CSS3 (design responsive avec palette de couleurs personnalisée : #fff9ef, #ffbba6, #ed2a2a)
-- Google Fonts
-- Structure one-page avec scroll snap
+- **HTML5** - Structure sémantique
+- **CSS3** - Styles et animations
+  - Variables CSS pour faciliter la maintenance
+  - Flexbox pour la mise en page
+  - Media queries pour le responsive design
+  - Transitions et animations fluides
+- **Google Fonts** - Typographies personnalisées (Limelight, Oooh Baby, Montserrat)
+- **Architecture** - One-page avec scroll snap
+
+## 📁 Structure du projet
+
+```
+Projet-portfolio/
+├── projetportfolio.html    # Page principale
+├── css/
+│   └── style.css           # Feuille de styles (variables CSS + responsive)
+├── images/                 # Assets visuels
+│   ├── photodeprofil.jpg
+│   ├── python_logo.png
+│   ├── CSS.svg
+│   ├── php.png
+│   ├── html.png
+│   ├── Demineur.png
+│   ├── hangman.png
+│   ├── Joyceparis.png
+│   ├── jeudelavie.gif
+│   └── [icônes contact]
+└── README.md               # Documentation
+
+```
+
+## 🎨 Palette de couleurs
+
+- **Fond** : `#fff9ef` (beige clair)
+- **Primaire** : `#ffbba6` (rose saumon)
+- **Secondaire** : `#ed2a2a` (rouge)
+- **Texte** : `#333` (gris foncé)
+- **Blanc** : `#fff`
+
+## 🚀 Améliorations récentes
+
+### Décembre 2025
+- ✅ Séparation du CSS dans un fichier externe
+- ✅ Ajout de variables CSS pour une meilleure maintenabilité
+- ✅ Organisation du code en sections commentées
+- 🔄 En cours : Navigation, responsive design, accessibilité
+
+## 📱 Compatibilité
+
+- ✅ Chrome, Firefox, Safari, Edge (dernières versions)
+- ✅ Mobile, tablette, desktop
+- ✅ Standards d'accessibilité WCAG
 
 ## 👤 Auteure
 
 **Jocelyne Muller**  
 AI & Cybersecurity Developer  
 Formation IBM AI & Cybersecurity Academy
+
+## 📞 Contact
+
+- 📧 Email : jocelyned.muller@gmail.com
+- 📍 Localisation : Sélestat, France
+- 💼 LinkedIn : [À venir]
+- 💻 GitHub : [JocelyneMuller](https://github.com/JocelyneMuller)
