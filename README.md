@@ -60,10 +60,17 @@ Projet-portfolio/
 ## 🚀 Améliorations récentes
 
 ### Décembre 2025
-- ✅ Séparation du CSS dans un fichier externe
-- ✅ Ajout de variables CSS pour une meilleure maintenabilité
-- ✅ Organisation du code en sections commentées
-- 🔄 En cours : Navigation, responsive design, accessibilité
+- ✅ **Séparation du CSS** dans un fichier externe (`css/style.css`)
+- ✅ **Variables CSS** pour une meilleure maintenabilité des couleurs
+- ✅ **Organisation du code** en sections commentées
+- ✅ **Navigation sticky** avec menu burger responsive
+- ✅ **Design responsive** optimisé pour mobile, tablette et desktop
+- ✅ **Accessibilité WCAG** : ARIA labels, balises sémantiques, focus visible
+- ✅ **Bouton retour en haut** avec animation
+- ✅ **Smooth scroll** entre les sections
+- ✅ **Lazy loading** pour les images de projets
+- ✅ **Liens actifs** : téléphone, email, LinkedIn, GitHub
+- ✅ **Effets hover** et transitions fluides sur tous les éléments interactifs
 
 ## 📱 Compatibilité
 
